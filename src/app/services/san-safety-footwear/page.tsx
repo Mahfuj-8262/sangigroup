@@ -73,7 +73,7 @@ export default function SanSafetyFootwearPage() {
               Each pair is meticulously crafted to the highest standards, delivering protection and style to professionals across industries.
             </p>
             <p className="leading-relaxed">
-              Whether you're an importer offering premium footwear, a manufacturer seeking finest materials, or a supplier focused on
+              Whether you&apos;re an importer offering premium footwear, a manufacturer seeking finest materials, or a supplier focused on
               safety and comfort — San Safety Footwear Industries is your trusted partner in quality, innovation, and reliability.
             </p>
             <div className="grid grid-cols-3 gap-4 text-center mt-10">
@@ -244,7 +244,7 @@ export default function SanSafetyFootwearPage() {
             className="mt-16 border-t border-gray-700 pt-8 max-w-3xl mx-auto text-center"
           >
             <p className="text-sm text-gray-400 italic">
-              “Our certifications are more than honors — they're our promise of trust, safety, and consistency in every pair we produce.”
+              “Our certifications are more than honors — they&apos;re our promise of trust, safety, and consistency in every pair we produce.”
             </p>
           </motion.div>
         </div>

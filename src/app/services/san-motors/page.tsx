@@ -81,7 +81,7 @@ export default function SanMotorsPage() {
             {...fadeUp()}
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-white"
           >
-            <span className="text-indigo-400">SAN</span> Motor's Limited
+            <span className="text-indigo-400">SAN</span> Motor&apos;s Limited
           </motion.h1>
           <motion.p
             {...fadeUp(0.2)}
@@ -121,21 +121,21 @@ export default function SanMotorsPage() {
               Distinguished Vehicle <span className="text-gray-500">Importer & Supplier</span>
             </h2>
             <p className="leading-relaxed mb-4">
-              SAN Motor's Limited stands as a distinguished vehicle importer and
+              SAN Motor&apos;s Limited stands as a distinguished vehicle importer and
               supplier, specializing in both commercial vehicles and private
               cars. Our focus on delivering quality products has positioned us as
-              a leading player in Bangladesh's automotive industry.
+              a leading player in Bangladesh&apos;s automotive industry.
             </p>
             <p className="leading-relaxed mb-4">
               By recognizing the growing demand for commercial vehicles across
-              the country, SAN Motor's Limited has built strong relationships
+              the country, SAN Motor&apos;s Limited has built strong relationships
               with trusted global manufacturers to offer top-notch vehicles that
               combine performance, safety, and durability.
             </p>
             <p className="leading-relaxed">
               What truly sets us apart is our commitment to excellence—ensuring
-              that every vehicle we deliver exceeds expectations. Whether it's a
-              commercial fleet or a private car, SAN Motor's Limited remains a
+              that every vehicle we deliver exceeds expectations. Whether it&apos;s a
+              commercial fleet or a private car, SAN Motor&apos;s Limited remains a
               trusted and preferred choice for dependable mobility solutions.
             </p>
           </motion.div>
@@ -325,7 +325,7 @@ export default function SanMotorsPage() {
             {...fadeUp(0.2)}
             className="text-gray-300 max-w-3xl mx-auto mb-12"
           >
-            As an authorized importer and dealer, SAN Motor's Limited proudly brings
+            As an authorized importer and dealer, SAN Motor&apos;s Limited proudly brings
             a curated selection of international automotive brands directly to
             Bangladesh — ensuring genuine quality, authenticity, and reliability in
             every delivery.
@@ -446,7 +446,7 @@ export default function SanMotorsPage() {
           {...fadeUp(0.1)}
           className="text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
         >
-          At SAN Motor's Limited, we remain committed to providing quality vehicles,
+          At SAN Motor&apos;s Limited, we remain committed to providing quality vehicles,
           trustworthy service, and long-term reliability. Our journey is defined by
           satisfied clients, strong partnerships, and a promise to deliver only the
           best in every drive.
@@ -461,7 +461,7 @@ export default function SanMotorsPage() {
               Our Vision
             </h3>
             <p className="text-sm leading-relaxed text-gray-50">
-              To be Bangladesh's most trusted automotive partner, enhancing mobility
+              To be Bangladesh&apos;s most trusted automotive partner, enhancing mobility
               through integrity and excellence.
             </p>
           </div>

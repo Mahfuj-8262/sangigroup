@@ -70,7 +70,7 @@ export default function SangiTradePage() {
             </p>
             <p className="text-gray-700 leading-relaxed">
               From agricultural products to industrial goods, our mission is to
-              represent Bangladesh's capacity for integrity and innovation on a
+              represent Bangladesh&apos;s capacity for integrity and innovation on a
               global stage.
             </p>
           </motion.div>

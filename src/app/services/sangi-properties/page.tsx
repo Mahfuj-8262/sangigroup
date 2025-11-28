@@ -24,7 +24,7 @@ export default function SangiPropertiesPage() {
             SANGi Properties & Development
           </motion.h1>
           <motion.p {...fadeUp(0.1)} className="text-gray-200 mb-6 max-w-xl">
-            Designing tomorrow's sustainable spaces for communities that thrive.
+            Designing tomorrow&apos;s sustainable spaces for communities that thrive.
           </motion.p>
           <motion.div {...fadeUp(0.2)}>
             <Link href="/contact">
@@ -217,7 +217,7 @@ export default function SangiPropertiesPage() {
             {...fadeUp(0.3)}
             className="mt-16 text-sm text-gray-400 italic border-t border-emerald-800 pt-8 max-w-4xl mx-auto"
           >
-            “We don't just construct buildings — we create investment opportunities,
+            “We don&apos;t just construct buildings — we create investment opportunities,
            real estate value, and lasting legacies for our partners.”
           </motion.div>
         </div>
@@ -237,7 +237,7 @@ export default function SangiPropertiesPage() {
           {...fadeUp(0.1)}
           className="text-gray-600 max-w-3xl mx-auto mb-14 leading-relaxed"
         >
-          Backed by years of expertise and a commitment to excellence, SANGi Properties & Development delivers projects that define trust and value in Bangladesh's growing real estate market.
+          Backed by years of expertise and a commitment to excellence, SANGi Properties & Development delivers projects that define trust and value in Bangladesh&apos;s growing real estate market.
         </motion.p>
 
         <motion.div
@@ -276,7 +276,7 @@ export default function SangiPropertiesPage() {
           className="mt-16 border-t border-gray-400 pt-8 max-w-4xl mx-auto"
         >
           <p className="text-sm text-gray-600 italic">
-            “Together, we shape Bangladesh's urban horizon — uniting vision, purpose, and progress through development.”
+            “Together, we shape Bangladesh&apos;s urban horizon — uniting vision, purpose, and progress through development.”
           </p>
         </motion.div>
       </section>

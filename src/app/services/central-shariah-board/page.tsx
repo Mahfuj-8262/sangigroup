@@ -293,7 +293,7 @@ export default function CentralShariahBoardPage() {
             className="mt-20 border-t border-gray-700 pt-8 max-w-4xl mx-auto"
           >
             <p className="text-sm text-gray-400 italic leading-relaxed">
-              “Transparency and faith-based compliance are the foundation of SANGi Group's success — guided by our Shariah Board to build growth with integrity.”
+              “Transparency and faith-based compliance are the foundation of SANGi Group&apos;s success — guided by our Shariah Board to build growth with integrity.”
             </p>
           </motion.div>
         </div>
@@ -319,7 +319,7 @@ export default function CentralShariahBoardPage() {
             {...fadeUp(0.1)}
             className="text-gray-700 max-w-3xl mx-auto mb-14 leading-relaxed"
           >
-            The Central Shariah Board serves as the heart of SANGi Group's ethical framework. Their guidance and approval ensure that our business and financial endeavors are carried out with integrity, purpose, and complete Shariah compliance. Every decision we make is a reflection of faith inspired by trust and accountability.
+            The Central Shariah Board serves as the heart of SANGi Group&apos;s ethical framework. Their guidance and approval ensure that our business and financial endeavors are carried out with integrity, purpose, and complete Shariah compliance. Every decision we make is a reflection of faith inspired by trust and accountability.
           </motion.p>
 
           {/* Three closing highlights */}
