@@ -254,18 +254,25 @@ export default function SanSafetyFootwearPage() {
       </section>
 
       {/* ---------- Research & Innovation ---------- */}
-      <section className="relative bg-gray-50 py-24 px-6 sm:px-10 lg:px-20 overflow-hidden text-gray-900">
+      <section className="relative py-24 px-6 sm:px-10 lg:px-20 overflow-hidden text-gray-900">
+        <Image
+          src="/research-innovation-bg.jpeg"
+          alt="San Safety Footwear"
+          fill
+          priority
+          className="object-cover opacity-60"
+        />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           {/* Heading */}
           <motion.h2
             {...fadeUp()}
-            className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800"
+            className="text-3xl sm:text-4xl font-bold mb-6 text-gray-950"
           >
-            Research &amp; <span className="text-gray-500">Development</span>
+            Research &amp; <span className="text-gray-800">Development</span>
           </motion.h2>
           <motion.p
             {...fadeUp(0.1)}
-            className="text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed"
+            className="text-gray-50 max-w-3xl mx-auto mb-16 leading-relaxed"
           >
             At San Safety Footwear Industries, progress means commitment to innovation and precision. Our R&D team continuously refines materials, design techniques, and production processes to ensure every pair delivers safety, durability, and comfort.
           </motion.p>
@@ -327,14 +334,14 @@ export default function SanSafetyFootwearPage() {
             {...fadeUp(0.3)}
             className="mt-16 border-t border-gray-500 pt-8 max-w-4xl mx-auto"
           >
-            <p className="text-sm text-gray-500 italic leading-relaxed">
+            <p className="text-sm text-gray-50 italic leading-relaxed">
               “Driven by research, refined by engineering precision — our innovation ensures safety and comfort for workers worldwide.”
             </p>
           </motion.div>
         </div>
 
         {/* Background accent */}
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-50 via-transparent to-gray-50 pointer-events-none" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-amber-50 via-transparent to-gray-50 pointer-events-none" /> */}
       </section>
 
       {/* ---------- Industries Served ---------- */}

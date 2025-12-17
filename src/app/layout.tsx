@@ -2,6 +2,8 @@ import "./globals.css";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

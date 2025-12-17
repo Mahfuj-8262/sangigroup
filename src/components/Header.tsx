@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const services = [
   { href: "/services/san-motors", name: "SAN Motor's Limited" },
@@ -25,9 +26,24 @@ const navLinks = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const isActive = (href?: string) => {
+    if (!href) return false;
+    return pathname === href;
+  };
+
+  const isServiceActive = () => {
+    return pathname.startsWith("/services");
+  };
+
+  const activeClass =
+    "text-blue-700 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-blue-700 after:content-['']";
+
+
   return (
     <header
-      className="top-0 z-50 bg-white shadow-sm"
+      className="top-0 z-50 sticky bg-white shadow-sm"
       style={{ fontFamily: "'Golos Text', sans-serif" }}
     >
       <nav
@@ -57,11 +73,11 @@ export default function Header() {
             link.dropdown ? (
               <li key={link.text} className="relative group">
                 <button
-                  className="
-                    flex items-center gap-1 px-3 py-2
+                  className={`
+                    relative flex items-center gap-1 px-3 py-2
                     transition-colors cursor-pointer
-                    hover:text-blue-700 text-gray-900
-                  "
+                    ${isServiceActive() ? activeClass : "text-gray-900 hover:text-blue-700"}
+                  `}
                 >
                   {link.text}
                   <ChevronDown
@@ -85,11 +101,14 @@ export default function Header() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="
-                          block px-4 py-2 text-sm
-                          text-gray-700 hover:text-blue-700
-                          hover:bg-gray-50 cursor-pointer
-                        "
+                        className={`
+                          block px-4 py-2 text-sm transition-colors cursor-pointer
+                          ${
+                            isActive(item.href)
+                              ? "text-blue-700 bg-gray-50 font-semibold"
+                              : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+                          }
+                        `}
                       >
                         {item.name}
                       </Link>
@@ -101,11 +120,10 @@ export default function Header() {
               <li key={link.text}>
                 <Link
                   href={link.href}
-                  className="
-                    px-3 py-2 cursor-pointer
-                    transition-colors
-                    text-gray-900 hover:text-blue-700
-                  "
+                  className={`
+                    relative px-3 py-2 transition-colors cursor-pointer
+                    ${isActive(link.href) ? activeClass : "text-gray-900 hover:text-blue-700"}
+                  `}
                 >
                   {link.text}
                 </Link>
@@ -202,7 +220,14 @@ export default function Header() {
             {navLinks.map((link) =>
               link.dropdown ? (
                 <details key={link.text} className="group">
-                  <summary className="cursor-pointer px-2 py-1 text-gray-800 flex items-center justify-between hover:text-blue-700">
+                  <summary className={`
+                    cursor-pointer px-2 py-2 flex items-center justify-between rounded transition
+                    ${
+                      isServiceActive()
+                        ? "text-blue-700 font-semibold bg-gray-100"
+                        : "text-gray-800 hover:text-blue-700"
+                    }
+                  `}>
                     {link.text}
                     <ChevronDown
                       size={16}
@@ -215,7 +240,14 @@ export default function Header() {
                         <Link
                           href={item.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block text-gray-600 hover:text-blue-700 text-sm cursor-pointer"
+                          className={`
+                            block py-1 text-sm transition
+                            ${
+                              isActive(item.href)
+                                ? "text-blue-700 font-semibold"
+                                : "text-gray-600 hover:text-blue-700"
+                            }
+                          `}
                         >
                           {item.name}
                         </Link>
@@ -228,7 +260,14 @@ export default function Header() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-2 py-1 rounded hover:bg-gray-100 transition cursor-pointer hover:text-blue-700"
+                    className={`
+                      block px-2 py-2 rounded transition
+                      ${
+                        isActive(link.href)
+                          ? "text-blue-700 font-semibold bg-gray-100"
+                          : "text-gray-800 hover:text-blue-700 hover:bg-gray-100"
+                      }
+                    `}
                   >
                     {link.text}
                   </Link>
