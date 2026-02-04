@@ -42,12 +42,15 @@ export default function LanguageSwitcher() {
         .goog-te-gadget span,
         #goog-gt-tt,
         .goog-tooltip,
-        .goog-text-highlight {
+        .goog-te-spinner-pos,
+        .goog-te-spinner,
+        .VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+        .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc,
+        .goog-te-gadget-icon {
           display: none !important;
           visibility: hidden !important;
         }
         body { top: 0 !important; }
-        font[style] { background: none !important; }
       `;
       document.head.appendChild(style);
     };
@@ -107,13 +110,26 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
     setCurrentLang(langLabel);
     
-    document.cookie = `selectedLanguage=${langLabel}; path=/`;
+    // Clear old cookies
+    document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+    document.cookie = `googtrans=; path=/; domain=${window.location.hostname}; expires=Thu, 01 Jan 1970 00:00:00 UTC`;
     
+    // Set language preference
+    document.cookie = `selectedLanguage=${langLabel}; path=/; max-age=31536000`;
+    
+    // Set direction attribute
+    const isRTL = langCode === 'ar';
+    document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+    
+    // Set new translation cookie
     const translateTo = langCode === 'en' ? '' : langCode;
-    document.cookie = `googtrans=/en/${translateTo}; path=/`;
-    document.cookie = `googtrans=/en/${translateTo}; path=/; domain=${window.location.hostname}`;
+    const cookieValue = `/en/${translateTo}`;
+    document.cookie = `googtrans=${cookieValue}; path=/; max-age=31536000`;
     
-    window.location.reload();
+    // Delay reload to ensure cookies are set
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   };
 
   return (

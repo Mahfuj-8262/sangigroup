@@ -19,18 +19,18 @@ const notoSansSC = Noto_Sans_SC({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${notoNaskhArabic.variable} ${notoSansSC.variable}`}>
+    <html lang="en" dir="ltr" className={`${notoNaskhArabic.variable} ${notoSansSC.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
             var lang = document.cookie.match(/googtrans=\/en\/([^;]+)/);
-            if (lang && lang[1] && lang[1] !== 'en') {
-              document.documentElement.style.visibility = 'hidden';
-              window.addEventListener('load', function() {
-                setTimeout(function() {
-                  document.documentElement.style.visibility = 'visible';
-                }, 1000);
-              });
+            if (lang && lang[1]) {
+              var langCode = lang[1];
+              if (langCode === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+              } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+              }
             }
           })();
         `}} />
