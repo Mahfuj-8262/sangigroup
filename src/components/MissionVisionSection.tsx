@@ -14,9 +14,7 @@ export default function MissionVisionSection() {
             <span className="text-black">Vision</span>
           </h2>
           <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-sm sm:text-base">
-            At SANGi Group of Industries, our mission and vision guide every initiative —
-            enhancing lives, empowering communities, and building a sustainable future through
-            innovation, integrity, and excellence.
+            At SANGi Group, our mission and vision guide every initiative — enhancing lives, empowering communities and building a sustainable future through innovation, integrity, and excellence. We aim to lead as a responsible, innovative and sustainable business group, creating lasting value for communities, clients and industries worldwide.
           </p>
         </div>
 
@@ -41,22 +39,22 @@ export default function MissionVisionSection() {
               {
                 title: "Enhance Lives",
                 text:
-                  "Deliver innovative, reliable solutions that improve quality of life for our clients and communities.",
+                  "Deliver innovative and reliable solutions that improve the quality of life for our clients, partners, and communities.",
               },
               {
                 title: "Diversified Industries",
                 text:
-                  "Operate responsibly across six core sectors spanning energy, automotive, textiles, safety, and healthcare.",
+                  "Operate responsibly across multiple sectors — automotive, trade, real estate, safety footwear, protein & agro and social development — ensuring sustainable growth and value.",
               },
               {
                 title: "Integrity & Excellence",
                 text:
-                  "Uphold trust through consistent quality, safety standards, and sustainable growth driven by innovation.",
+                  "Uphold trust through consistent quality, safety and ethical standards, driven by innovation and a commitment to excellence.",
               },
               {
                 title: "Community Focus",
                 text:
-                  "Align business expansion with social and environmental progress for a shared future.",
+                  "Align business operations with social and environmental responsibility to create positive impact and shared prosperity for communities.",
               },
             ].map((item) => (
               <div
@@ -88,22 +86,22 @@ export default function MissionVisionSection() {
               {
                 title: "Global Leadership",
                 text:
-                  "Be a Bangladesh-born brand recognized globally for ethics, innovation, and excellence.",
+                  "Become a Bangladesh-born brand recognized worldwide for ethics, innovation and excellence.",
               },
               {
                 title: "Industrial Excellence",
                 text:
-                  "Set benchmarks in quality, creativity, and sustainable development.",
+                  "Set industry benchmarks in quality, creativity and sustainable development across all business sectors.",
               },
               {
                 title: "Empowering People",
                 text:
-                  "Advance education, safety, and healthcare initiatives that uplift communities.",
+                  "Advance education, safety, healthcare and social initiatives to uplift communities and enhance opportunities.",
               },
               {
                 title: "Sustainable Future 2030",
                 text:
-                  "Champion green growth and ethical governance for long-term prosperity.",
+                  "Champion green growth, ethical governance and long-term prosperity for a resilient and sustainable future.",
               },
             ].map((item) => (
               <div

@@ -13,37 +13,37 @@ const services: Service[] = [
   {
     title: "SAN Motor's Limited",
     description:
-      "Specializing in automotive innovation and manufacturing, providing reliable vehicles and sustainable mobility solutions.",
+      "Specializes in the import and supply of high-quality vehicles, delivering reliable performance, safety and value. We focus on trusted sourcing, careful inspection and dependable after-sales support to ensure long-term customer satisfaction and sustainable mobility solutions.",
     link: "/services/san-motors",
   },
   {
     title: "SANGi Trade International",
     description:
-      "A global trading enterprise connecting businesses with markets and delivering products worldwide with trust.",
+      "Connects global markets through import & export services and delivers reliable agent banking solutions as an authorized outlet of Islami Bank Bangladesh PLC.",
     link: "/services/sangi-trade",
   },
   {
     title: "SANGi Properties & Development",
     description:
-      "Focused on real estate development, bringing modern architecture and lasting value to communities.",
+      "Engaged in land purchase and sale, flat sales and trusted real estate services, delivering transparent transactions and long-term value for clients.",
     link: "/services/sangi-properties",
   },
   {
     title: "San Safety Footwear Industries",
     description:
-      "Manufacturing durable, high-quality safety footwear to protect workers across critical industries.",
+      "Engaged in the manufacturing of safety footwear, delivering strength, comfort and protection to meet demanding industrial environments.",
     link: "/services/san-safety-footwear",
   },
   {
     title: "Central Shariah Board of Sangi Group",
     description:
-      "Ensuring ethical and Shariah-compliant corporate practices across all divisions of Sangi Group.",
+      "Oversees and ensures that all business activities across every sector of the Group strictly comply with Islamic Shariah principles. The Board provides guidance, supervision and review to maintain ethical conduct, transparency and Shariah-compliant operations in all corporate practices. It also ensures that all financial transactions, contracts and banking activities are conducted in full accordance with Islamic Shariah rules and guidelines.",
     link: "/services/central-shariah-board",
   },
   {
-    title: "Abdus Sattar Foundation",
+    title: " SAN Global Care Foundation",
     description:
-      "Philanthropic initiatives fostering education, healthcare, and welfare programs for underprivileged communities.",
+      "A charitable organization committed to improving the lives of underprivileged communities worldwide. Through initiatives in education, healthcare and social welfare, the Foundation works to create lasting positive impact, empower individuals and foster sustainable development.",
     link: "/services/abdus-sattar-foundation",
   },
 ];

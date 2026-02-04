@@ -28,7 +28,7 @@ export default function AbdusSattarFoundationPage() {
             {...fadeUp()}
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            <span className="text-amber-400">Welcome</span> to the Abdus Sattar Foundation
+            <span className="text-amber-400">Welcome</span> to the SAN Global Care Foundation
           </motion.h1>
 
           {/* Supporting line */}
@@ -52,7 +52,7 @@ export default function AbdusSattarFoundationPage() {
             {...fadeUp(0.3)}
             className="max-w-4xl mx-auto text-gray-300 text-base sm:text-lg leading-relaxed"
           >
-            Abdus Sattar Foundation is a non-profit organization committed to uplifting communities across Bangladesh. 
+            SAN Global Care Foundation is a non-profit organization committed to uplifting communities across Bangladesh. 
             We focus on education, health support, social welfare, and skill development to build a future where everyone can thrive. 
             Our vision is guided by humanity, compassion, and a shared belief that together we can build a more hopeful society.
           </motion.p> */}
@@ -74,7 +74,7 @@ export default function AbdusSattarFoundationPage() {
           {...fadeUp(0.1)}
           className="max-w-4xl mx-auto text-gray-600 leading-relaxed mb-6"
         >
-          Abdus Sattar Foundation is a non-profit organization committed to making a lasting positive impact. We focus on education, healthcare, and community development to uplift the lives of those in need.
+          SAN Global Care Foundation is a non-profit organization committed to making a lasting positive impact. We focus on education, healthcare, and community development to uplift the lives of those in need.
         </motion.p>
         <motion.p
           {...fadeUp(0.2)}
@@ -117,7 +117,7 @@ export default function AbdusSattarFoundationPage() {
           {...fadeUp(0.1)}
           className="text-gray-200 text-center max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          The Abdus Sattar Foundation drives real change through targeted initiatives that focus on knowledge, health, and economic growth.  
+          The SAN Global Care Foundation drives real change through targeted initiatives that focus on knowledge, health, and economic growth.  
           Each program is built on the belief that empowerment begins with opportunity.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
@@ -212,7 +212,7 @@ export default function AbdusSattarFoundationPage() {
           {...fadeUp(0.1)}
           className="text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Driven by compassion and a shared responsibility towards society, Abdus Sattar Foundation works to create lasting impact. 
+          Driven by compassion and a shared responsibility towards society, SAN Global Care Foundation works to create lasting impact. 
           Join us in our journey to spread kindness and build a better world for those in need.
         </motion.p>
         <motion.div {...fadeUp(0.2)} className="flex justify-center gap-4">

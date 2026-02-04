@@ -43,12 +43,10 @@ export default function Footer() {
           {/* SANGI GROUP INFO */}
           <div>
             <h3 className="text-lg font-bold text-white mb-3">
-              SANGi Group of Industries
+               SAN Global Industries Limited
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Diversified conglomerate in automotive, trade, property
-              development, safety products, and community services — committed
-              to innovation, integrity, and excellence.
+              At SANGi Group, our mission and vision guide every initiative — enhancing lives, empowering communities and building a sustainable future through innovation, integrity, and excellence. We aim to lead as a responsible, innovative and sustainable business group, creating lasting value for communities, clients and industries worldwide.
             </p>
           </div>
 
@@ -58,42 +56,50 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link
-                  href="/services"
+                  href="/services/san-motors"
                   className="hover:text-white transition-colors"
                 >
-                  Services
+                  SAN Motor&apos;s Limited
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/services/sangi-trade"
                   className="hover:text-white transition-colors"
                 >
-                  About Us
+                  SANGi Trade International
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/services/sangi-properties"
                   className="hover:text-white transition-colors"
                 >
-                  Contact Us
+                  SANGi Properties & Development
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href="/services/san-safety-footwear"
                   className="hover:text-white transition-colors"
                 >
-                  Privacy Policy
+                  San Safety Footwear Industries
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="/services/central-shariah-board"
                   className="hover:text-white transition-colors"
                 >
-                  Terms of Service
+                  Central Shariah Board of SANGi Group
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/global-care-foundation"
+                  className="hover:text-white transition-colors"
+                >
+                  SAN Global Care Foundation
                 </Link>
               </li>
             </ul>
@@ -119,7 +125,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-white font-medium">Phone:</span>
-                <br />+880 1730-718304 / +880 2226-665598
+                <br />+880 1730-718300 / +880 2226-665598
               </li>
               <li>
                 <span className="text-white font-medium">Email:</span>
@@ -176,7 +182,7 @@ export default function Footer() {
           </div>
 
           <small className="text-center md:text-right">
-            © {new Date().getFullYear()} SANGi Group of Industries — All Rights Reserved.
+            © {new Date().getFullYear()} SAN Global Industries Limited — All Rights Reserved.
           </small>
         </div>
       </div>

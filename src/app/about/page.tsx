@@ -19,18 +19,14 @@ export default function AboutPage() {
           {...fadeUp()}
           className="text-4xl sm:text-5xl font-bold mb-6"
         >
-          About <span className="text-gray-500">SANGi Group</span>
+          About <span className="text-gray-500">SAN Group</span>
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.1)}
           className="max-w-3xl mx-auto text-gray-600 leading-relaxed"
         >
-          SANGi Group of Industries is a diversified business group operating
-          across multiple sectors, built on a foundation of responsibility,
-          discipline, and long-term vision. Our approach focuses on sustainable
-          growth, ethical decision-making, and meaningful contributions to the
-          markets and communities we serve.
+          SAN Group of Industries, established in 2012, is a diversified business group in Bangladesh operating across automotive, international trade, real estate, safety footwear, protein & agro products and social development initiatives. Committed to sustainable growth, ethical practices and innovation, we deliver high quality products and services from durable safety footwear to reliable agro supplies while creating lasting value for clients, communities and industries nationwide.
         </motion.p>
       </section>
 
@@ -48,21 +44,14 @@ export default function AboutPage() {
             {...fadeUp(0.1)}
             className="text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6"
           >
-            SANGi Group was formed with a clear objective — to develop businesses
-            that are resilient, transparent, and aligned with long-term value
-            creation. Over time, the Group has expanded into diverse sectors
-            while maintaining a consistent governance structure and shared
-            operational philosophy.
+            <span className="font-bold">SAN Group of Industries</span> was established in 2012 with a clear vision: to build diversified businesses that are resilient, transparent and focused on creating long-term value. Since then, the Group has expanded across multiple sectors including automotive, international trade, real estate, safety footwear, protein & agro products and social development while maintaining consistent governance, ethical practices and a shared operational philosophy.
           </motion.p>
 
           <motion.p
             {...fadeUp(0.2)}
             className="text-gray-700 leading-relaxed max-w-4xl mx-auto"
           >
-            Each business unit operates independently while adhering to unified
-            standards of quality, accountability, and ethical oversight. This
-            structure allows us to adapt to industry-specific challenges without
-            compromising our core principles.
+            Each business unit operates independently, yet adheres to unified standards of quality, accountability and Shariah compliant oversight where applicable. This structure enables us to meet industry specific challenges effectively while staying true to our core principles of integrity, innovation and sustainable growth.
           </motion.p>
         </div>
       </section>

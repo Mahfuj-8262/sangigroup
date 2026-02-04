@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import PosterCarousel from "@/components/PosterCarousel";
 import ServiceSection from "@/components/ServiceSection";
 import QualityTrustSection from "@/components/QualityTrustSection";

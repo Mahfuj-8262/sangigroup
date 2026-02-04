@@ -6,32 +6,32 @@ export default function WhyChooseUs() {
   const features = [
     {
       title: "Trusted Partner",
-      text: "We build long-term partnerships through transparency, reliability, and quality assurance across every division.",
+      text: "We build long-term partnerships based on transparency, reliability and consistent quality across all sectors, ensuring confidence for clients and collaborators alike.",
       icon: "🤝",
     },
     {
       title: "Shariah-Compliant",
-      text: "We ensure ethical governance in all operations, guided by our Central Shariah Board for transparent and fair business practices.",
+      text: "Guided by our Central Shariah Board, we maintain ethical and Shariah-compliant practices across all businesses including trade, banking and industrial operations.",
       icon: "☪️",
     },
     {
       title: "Innovative Solutions",
-      text: "Consistently improving with technology-driven solutions that increase efficiency and create smarter industries.",
+      text: "Leveraging technology and industry expertise, we deliver efficient, forward-thinking solutions that drive smarter, more competitive operations.",
       icon: "💡",
     },
     {
       title: "Global Standards",
-      text: "Committed to maintaining international quality, safety, and sustainability benchmarks in every product and service.",
+      text: "We adhere to international benchmarks for quality, safety and sustainability, ensuring that every product and service meets global expectations.",
       icon: "🌍",
     },
     {
       title: "Community Focused",
-      text: "Every project aligns with our social responsibility mission — uplifting communities and supporting development.",
+      text: "Every project aligns with our social responsibility mission — empowering communities, promoting education, healthcare and supporting sustainable development.",
       icon: "🤲",
     },
     {
       title: "Sustainable Growth",
-      text: "Our expansion is rooted in green practices and responsible resource management for a better future.",
+      text: "Our growth strategy is rooted in responsible resource management and environmentally friendly practices, ensuring long-term value for business and society.",
       icon: "🌱",
     },
   ];
@@ -51,8 +51,7 @@ export default function WhyChooseUs() {
             Why choose <span className="text-gray-300">SANGi?</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base mb-8 leading-relaxed max-w-lg">
-            Our clients and stakeholders benefit from a company committed to
-            transparency, ethical governance, and continuous improvement.
+            Our clients and stakeholders benefit from a company committed to transparency, ethical governance, innovation and sustainable growth across diverse industries.
           </p>
 
           <div className="rounded-xl overflow-hidden shadow-md bg-gray-800/40 backdrop-blur">

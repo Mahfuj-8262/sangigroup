@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -50,8 +48,7 @@ export default function ContactPage() {
           {...fadeUp(0.1)}
           className="max-w-2xl mx-auto text-gray-600 leading-relaxed"
         >
-          We&apos;re here to assist you. Reach out to SANGi Group of Industries for
-          business inquiries, partnerships, or general information.
+          We welcome your inquiries. Get in touch with <span className="font-bold">SAN Group of Industries</span> for questions, collaborations or anything you&apos;d like to know about us. 
         </motion.p>
       </section>
 
@@ -72,7 +69,7 @@ export default function ContactPage() {
             {
               icon: <Phone className="text-amber-400" size={28} />,
               title: "Call Us",
-              text: "+880 1730-718300 / +880 2226-665598",
+              text: "+880 1730-718300 / +8809614122012",
             },
           ].map((item, i) => (
             <motion.div

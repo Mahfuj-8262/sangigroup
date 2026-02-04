@@ -1,72 +1,154 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
-import { useLocale } from 'next-intl';
-import { useState } from 'react';
-import Cookies from 'js-cookie';
+import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+
+declare global {
+  interface Window {
+    google: {
+      translate: {
+        TranslateElement: {
+          new (config: {
+            pageLanguage: string;
+            includedLanguages: string;
+            layout: number;
+            autoDisplay: boolean;
+          }, elementId: string): void;
+          InlineLayout: {
+            SIMPLE: number;
+          };
+        };
+      };
+    };
+    googleTranslateElementInit: () => void;
+  }
+}
 
 export default function LanguageSwitcher() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const currentLocale = useLocale();
-  const [hover, setHover] = useState(false);
+  const [currentLang, setCurrentLang] = useState('English');
+  const [isOpen, setIsOpen] = useState(false);
 
-  const locales = [
-    { code: 'en', label: 'EN' },
-    { code: 'zh', label: '中文' },
-    { code: 'ar', label: 'ع' }
+  useEffect(() => {
+    const addStyles = () => {
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .goog-te-banner-frame,
+        .goog-te-menu-frame,
+        .skiptranslate,
+        #google_translate_element,
+        .goog-te-balloon-frame,
+        .goog-te-ftab,
+        .goog-logo-link,
+        .goog-te-gadget span,
+        #goog-gt-tt,
+        .goog-tooltip,
+        .goog-text-highlight {
+          display: none !important;
+          visibility: hidden !important;
+        }
+        body { top: 0 !important; }
+        font[style] { background: none !important; }
+      `;
+      document.head.appendChild(style);
+    };
+
+    const getCookie = (name: string) => {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    };
+
+    const disableTooltips = () => {
+      document.addEventListener('mouseover', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.tagName === 'FONT' || target.classList.contains('translated-ltr')) {
+          e.stopPropagation();
+          e.preventDefault();
+        }
+      }, true);
+    };
+
+    addStyles();
+    disableTooltips();
+
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,zh-CN,ar',
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+    };
+
+    if (!document.querySelector('script[src*="translate.google.com"]')) {
+      const script = document.createElement('script');
+      script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+
+    const savedLang = getCookie('selectedLanguage');
+    if (savedLang) {
+      setCurrentLang(savedLang);
+    }
+  }, []);
+
+  const languages = [
+    { code: 'en', label: 'English' },
+    { code: 'zh-CN', label: 'Chinese' },
+    { code: 'ar', label: 'Arabic' }
   ];
 
-  const switchLanguage = (locale: string) => {
-    const newPath = `/${locale}${pathname.replace(/^\/(en|zh|ar)/, '')}`;
-    Cookies.set('preferred_locale', locale);
-    router.push(newPath);
+  const translatePage = (langCode: string, langLabel: string) => {
+    setIsOpen(false);
+    setCurrentLang(langLabel);
+    
+    document.cookie = `selectedLanguage=${langLabel}; path=/`;
+    
+    const translateTo = langCode === 'en' ? '' : langCode;
+    document.cookie = `googtrans=/en/${translateTo}; path=/`;
+    document.cookie = `googtrans=/en/${translateTo}; path=/; domain=${window.location.hostname}`;
+    
+    window.location.reload();
   };
 
   return (
-    <div
-      className="fixed bottom-6 right-6 z-50 flex flex-col items-end"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      {/* Language options */}
-      <div
-        className={`flex flex-col items-end mb-2 transition-all duration-300 ease-in-out ${
-          hover ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-        }`}
-      >
-        <div className="bg-white shadow-lg rounded-md overflow-hidden border border-gray-200">
-          {locales.map(({ code, label }) => (
-            <button
-              key={code}
-              onClick={() => switchLanguage(code)}
-              className={`px-3 py-2 text-sm w-full text-right hover:bg-gray-100 ${
-                currentLocale === code ? 'bg-blue-100 text-blue-600 font-semibold' : ''
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Main circular button */}
-      <div
-        className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full shadow-lg cursor-pointer group relative transition-all duration-300 ease-in-out"
-      >
-        <span className="text-lg">🌐</span>
-
-        {/* Expanding “Switch Language?” label */}
-        <span
-          className={`absolute right-14 bg-blue-600 text-white text-sm whitespace-nowrap px-3 py-1.5 rounded-md shadow transition-all duration-300 origin-right ${
-            hover
-              ? 'opacity-100 scale-x-100 translate-x-0'
-              : 'opacity-0 scale-x-50 -translate-x-3 pointer-events-none'
-          }`}
+    <>
+      <div id="google_translate_element" style={{ display: 'none' }}></div>
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="notranslate flex items-center gap-1 px-2 py-1.5 text-xs border border-gray-300 rounded-md hover:bg-gray-50 transition bg-white"
         >
-          Switch Language?
-        </span>
+          <span className="notranslate">{currentLang}</span>
+          <ChevronDown size={14} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        </button>
+        
+        {isOpen && (
+          <div 
+            className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg overflow-hidden"
+            style={{ zIndex: 99999 }}
+          >
+            {languages.map(({ code, label }) => (
+              <button
+                key={label}
+                type="button"
+                onClick={() => translatePage(code, label)}
+                className={`notranslate block w-full text-left px-3 py-1.5 text-xs hover:bg-gray-100 transition ${
+                  currentLang === label ? 'bg-blue-50 text-blue-700 font-semibold' : ''
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 }

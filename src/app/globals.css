@@ -136,4 +136,38 @@
   body {
     @apply bg-background text-foreground;
   }
+  body:lang(ar), body[lang="ar"], [lang="ar"] {
+    font-family: var(--font-arabic), sans-serif !important;
+  }
+  body:lang(zh), body:lang(zh-CN), body[lang="zh"], body[lang="zh-CN"], [lang="zh"], [lang="zh-CN"] {
+    font-family: var(--font-chinese), "Microsoft YaHei", "SimHei", sans-serif !important;
+  }
+}
+/* Hide Google Translate UI elements */
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.skiptranslate,
+#google_translate_element,
+.goog-te-balloon-frame,
+.goog-te-menu2,
+div[id^="goog-gt-"],
+.goog-te-ftab,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+span.translated-ltr:hover,
+span[style*="background"] {
+  background: none !important;
+  border: none !important;
+}
+
+body {
+  top: 0 !important;
+  position: static !important;
 }

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const services = [
   { href: "/services/san-motors", name: "SAN Motor's Limited" },
@@ -13,7 +14,7 @@ const services = [
   { href: "/services/sangi-properties", name: "SANGi Properties & Development" },
   { href: "/services/san-safety-footwear", name: "San Safety Footwear Industries" },
   { href: "/services/central-shariah-board", name: "Central Shariah Board of SANGi Group" },
-  { href: "/services/abdus-sattar-foundation", name: "Abdus Sattar Foundation" },
+  { href: "/services/global-care-foundation", name: "SAN Global Care Foundation" },
 ];
 
 const navLinks = [
@@ -132,8 +133,9 @@ export default function Header() {
           )}
         </ul>
 
-        {/* ---------- Get in Touch (aligned to poster right edge) ---------- */}
-        <div className="hidden md:block">
+        {/* ---------- Language Switcher & Get in Touch ---------- */}
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
           <Link href="/contact">
             <Button
               size="sm"
@@ -147,30 +149,33 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* ---------- Mobile Toggle ---------- */}
-        <button
-          className="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-gray-100 transition cursor-pointer"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="h-7 w-7"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            viewBox="0 0 24 24"
+        {/* ---------- Mobile Language Switcher & Toggle ---------- */}
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            className="inline-flex items-center justify-center p-2 rounded hover:bg-gray-100 transition cursor-pointer"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d={
-                mobileMenuOpen
-                  ? "M6 18L18 6M6 6l12 12"
-                  : "M4 6h16M4 12h16M4 18h16"
-              }
-            />
-          </svg>
-        </button>
+            <svg
+              className="h-7 w-7"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d={
+                  mobileMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* ---------- Mobile Menu (Slide-in) ---------- */}

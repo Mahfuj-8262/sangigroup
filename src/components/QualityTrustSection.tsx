@@ -24,8 +24,7 @@ export default function QualityTrustSection() {
           Focusing on <span className="text-gray-500">quality,</span> we maintain customer trust
         </h2>
         <p className="text-gray-600 max-w-3xl mb-12">
-          We ensure every installation meets strict quality checks and sustainable standards. Our
-          dedication builds long-term trust with clients and partners worldwide.
+          We deliver reliable products and services across automobile, real estate, agro supply and industrial solutions, guided by strict quality standards at every stage. From sourcing and inspection to delivery and after-sales support, we ensure consistency, durability and value. Our commitment to transparency and responsible business practices gives customers confidence in every decision they make.<br/><br/>By understanding real market needs, we provide solutions that are practical, sustainable and dependable. This dedication to excellence has earned us long-term trust from clients and partners across diverse industries.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
